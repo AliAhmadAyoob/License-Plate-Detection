@@ -11,7 +11,7 @@ st.set_page_config(page_title="License Plate Recognition", page_icon="🚗")
 
 st.title("🚘 License Plate Recognition")
 st.write("Upload an image or video of a vehicle to recognize license plate.")
-uploaded = st.file_upload('Choose an image...',type=['jpg','jpeg','png'])
+uploaded = st.file_uploader('Choose an image...',type=['jpg','jpeg','png'])
 
 if uploaded is not None:
     if uploaded.type.startswith('image'):
