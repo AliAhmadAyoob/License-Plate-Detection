@@ -4,7 +4,7 @@ from IPython.display import Image
 
 @st.cache_resource
 def load_model():
-    return YOLO('licese-plate.pt')
+    return YOLO('license-plate.pt')
 model = load_model()
 
 st.set_page_config(page_title="License Plate Recognition", page_icon="🚗")
