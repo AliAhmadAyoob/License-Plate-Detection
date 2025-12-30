@@ -1,6 +1,6 @@
 import streamlit as st
 from ultralytics import YOLO
-from IPython.display import Image
+from PIL import Image
 
 @st.cache_resource
 def load_model():
