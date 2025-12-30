@@ -16,7 +16,7 @@ uploaded = st.file_uploader('Choose an image...',type=['jpg','jpeg','png'])
 if uploaded is not None:
     if uploaded.type.startswith('image'):
         img = Image.open(uploaded).convert("RGB")
-        st.image(img,caption='uploaded image',use_column_width=True)
+        # st.image(img,caption='uploaded image',use_column_width=True)
         with st.spinner("Detecting....."):
             pred = model.predict(img)
             res_img = pred[0].plot()[ :,:,::-1]
