@@ -15,7 +15,7 @@ uploaded = st.file_uploader('Choose an image...',type=['jpg','jpeg','png'])
 
 if uploaded is not None:
     if uploaded.type.startswith('image'):
-        img = Image.open(uploaded).convet("RGB")
+        img = Image.open(uploaded).convert("RGB")
         st.image(img,caption='uploaded image',use_column_width=True)
 
         pred = model.predict(img)
